@@ -1,5 +1,6 @@
-import Hello from "./chapter1/1-2/Hello";
+import Hello from "./chapter1/Hello";
 import "./App.css";
+import Wrapper from "./chapter1/Wrapper";
 
 function App() {
   const name = "react";
@@ -11,13 +12,12 @@ function App() {
   };
 
   return (
-    <>
-      <Hello />
-
+    <Wrapper>
+      <Hello color="blue" />
       {/* JSX 안에 자바스크립트 값 적용 */}
       <div style={style}>{name}</div>
       <div className="gray-box"></div>
-    </>
+    </Wrapper>
   );
 }
 
